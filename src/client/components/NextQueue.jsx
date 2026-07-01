@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { getShape } from '../core/pieces.js';
 import { selectNextTypes } from '../store/selectors.js';
 
-// Mini preview of the next 3 pieces, each rendered as a tiny CSS grid.
+// one piece rendered as a tiny CSS grid
 const Mini = ({ type }) => {
     const shape = getShape(type, 0);
     const size = shape.length;

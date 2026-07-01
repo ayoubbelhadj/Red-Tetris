@@ -3,10 +3,13 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { App } from './App.jsx';
+import { createStore } from './store/index.js';
 import './styles.css';
 
 createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>,
+    <Provider store={createStore()}>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Provider>,
 );

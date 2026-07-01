@@ -10,7 +10,7 @@ export const GameRoom = () => {
     const { room, playerName } = useParams();
     const dispatch = useDispatch();
     const { joined, error } = useSelector((state) => state.room);
-u
+
     useEffect(() => {
         dispatch(joinRoom({ room, name: playerName }));
         return () => dispatch(leaveRoom());
